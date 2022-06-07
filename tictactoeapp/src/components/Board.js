@@ -1,9 +1,13 @@
 import React from 'react';
 import Square from './Square';
 
+/**
+ * The Board component renders 9 squares
+ */
 class Board extends React.Component {
     renderSquare(i) {
-      return <Square />;
+    //Passing data to the Square component using the prop(prop is the short form of properties) called value
+      return <Square value={i}/>;
     }
   
     render() {

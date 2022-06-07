@@ -1,5 +1,8 @@
 import React from 'react';
 import Board from './Board';
+/**
+ * The Game compnent renders a board with placholder values
+ */
   class Game extends React.Component {
     render() {
       return (
