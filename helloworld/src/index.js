@@ -8,7 +8,7 @@
 // state, props and all the code that is react
 import React from 'react';
 
-//Acts as a glue between reat and DOM
+//Acts as a glue between react and DOM
 import ReactDOM from 'react-dom/client';
 //import ReactDOM from 'react-dom';
 const name = 'George Bush';
