@@ -5,13 +5,14 @@ import React from 'react';
  * with an "X" mark. To remember things components use state
  */
 class Square extends React.Component {
-    constructor(props){
+  /**  
+  constructor(props){
         super(props);
         //Initializing the state of a Square component
         this.state ={
             value: null,
         };
-    }
+    } */
     /**
     render() {
       return (
@@ -21,7 +22,7 @@ class Square extends React.Component {
         </button>
       );
     } */
-
+/**
     render(){
         return(
             <button className="square" onClick={()=>this.setState({value:'X'})}>
@@ -29,6 +30,15 @@ class Square extends React.Component {
             </button>
         );
     }
+ */
+    render(){
+      return(
+          <button className="square" onClick={()=>this.props.onClick()}>
+              {this.props.value}
+          </button>
+      );
+  }
   }
 
+  
 export  default Square;
