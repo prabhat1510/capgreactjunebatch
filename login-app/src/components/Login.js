@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 /**
 function Login(props){
     return (
@@ -21,7 +22,7 @@ function Login(props){
 
 function Login(props){
     return (
-        <div class="container-fluid">
+    <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -90,24 +91,12 @@ function Login(props){
 					</label>
 					<input type="password" class="form-control" id="exampleInputPassword1" />
 				</div>
-				<div class="form-group">
-					 
-					<label for="exampleInputFile">
-						File input
-					</label>
-					<input type="file" class="form-control-file" id="exampleInputFile" />
-					<p class="help-block">
-						Example block-level help text here.
-					</p>
-				</div>
-				<div class="checkbox">
-					 
-					<label>
-						<input type="checkbox" /> Check me out
-					</label>
-				</div> 
+				
 				<button type="submit" class="btn btn-primary">
 					Submit
+				</button>
+                <button type="cancel" class="btn btn-primary">
+					Cancel
 				</button>
 			</form>
 		</div>
