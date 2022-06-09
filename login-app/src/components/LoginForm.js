@@ -3,18 +3,23 @@ import 'bootstrap/dist/css/bootstrap.css';
 class LoginForm extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {value: ''};
+      this.state = {
+          username: ' ' ,
+          password: ' ',
+        };
   
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
   
     handleChange(event) {
-      this.setState({value: event.target.value});
+         this.setState({[event.target.name]: event.target.value});
+    
     }
   
     handleSubmit(event) {
-      alert('A name was submitted: ' + this.state.value);
+      alert('A name was submitted: ' + this.state.username);
+      alert('A password was submitted: ' + this.state.password);
       event.preventDefault();
     }
   
@@ -77,11 +82,11 @@ class LoginForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Username:
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
+            <input name="username" type="text" value={this.state.username} onChange={this.handleChange} />
           </label>
           <label>
             Password:
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
+            <input name="password" type="text" value={this.state.password} onChange={this.handleChange} />
           </label>
           <button type="submit" value="Submit" class="btn btn-primary"> Submit</button>
           <button type="cancel" class="btn btn-primary">
