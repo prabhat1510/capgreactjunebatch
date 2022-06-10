@@ -3,6 +3,7 @@ import FavoriteColor from './components/FavoriteColor';
 import Car from './components/Car';
 import Timer from './components/Timer';
 import Timers from './components/Timers';
+import Component1 from './components/usecontextexample/Component1';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
      <Car />
      <Timer />
      <Timers />
+     <Component1 />
     </div>
   );
 }
