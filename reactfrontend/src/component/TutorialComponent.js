@@ -1,8 +1,8 @@
 import React from 'react';
-import TutorialDataService from '../services/TutorialDataService';
+import TutorialDataService from "../services/TutorialDataService";
 class TutorialComponent{
     constructor(props) {
-        super(props);
+        //super(props);
         this.onChangeTitle = this.onChangeTitle.bind(this);
         this.onChangeDescription = this.onChangeDescription.bind(this);
         this.getTutorial = this.getTutorial.bind(this);

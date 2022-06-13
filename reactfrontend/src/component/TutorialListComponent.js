@@ -1,9 +1,10 @@
-import TutorialDataService from "../services/tutorial.service";
+import React from 'react';
+import TutorialDataService from "../services/TutorialDataService";
 import { Link } from "react-router-dom";
 
 class TutorialsList{
   constructor(props) {
-    super(props);
+    //super(props);
     this.onChangeSearchTitle = this.onChangeSearchTitle.bind(this);
     this.retrieveTutorials = this.retrieveTutorials.bind(this);
     this.refreshList = this.refreshList.bind(this);

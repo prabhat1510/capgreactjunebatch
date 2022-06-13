@@ -1,8 +1,8 @@
-import TutorialDataService from "../services/tutorial.service";
+import TutorialDataService from "../services/TutorialDataService";
 
 class AddTutorial{
   constructor(props) {
-    super(props);
+    //super(props);
     this.onChangeTitle = this.onChangeTitle.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
     this.saveTutorial = this.saveTutorial.bind(this);
