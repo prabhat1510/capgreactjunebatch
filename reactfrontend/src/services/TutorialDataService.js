@@ -1,6 +1,7 @@
 import http from '../http-common';
 class TutorialDataService{
       getAll() {
+          console.log("Inside get All method");
         return http.get("/tutorials");
       }
     
@@ -29,4 +30,4 @@ class TutorialDataService{
       }
 }
 
-export default TutorialDataService;
+export default new TutorialDataService();

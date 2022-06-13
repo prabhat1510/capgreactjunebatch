@@ -1,8 +1,8 @@
 import React from 'react';
 import TutorialDataService from "../services/TutorialDataService";
-class TutorialComponent{
+class TutorialComponent extends React.Component{
     constructor(props) {
-        //super(props);
+        super(props);
         this.onChangeTitle = this.onChangeTitle.bind(this);
         this.onChangeDescription = this.onChangeDescription.bind(this);
         this.getTutorial = this.getTutorial.bind(this);
@@ -20,10 +20,11 @@ class TutorialComponent{
           message: ""
         };
       }
+    
       componentDidMount() {
         this.getTutorial(this.props.match.params.id);
       }
-
+    
       onChangeTitle(e) {
         const title = e.target.value;
     
@@ -47,6 +48,7 @@ class TutorialComponent{
           }
         }));
       }
+    
       getTutorial(id) {
         TutorialDataService.get(id)
           .then(response => {
@@ -59,7 +61,7 @@ class TutorialComponent{
             console.log(e);
           });
       }
-
+    
       updatePublished(status) {
         var data = {
           id: this.state.currentTutorial.id,
@@ -98,7 +100,8 @@ class TutorialComponent{
             console.log(e);
           });
       }
-    deleteTutorial() {    
+    
+      deleteTutorial() {    
         TutorialDataService.delete(this.state.currentTutorial.id)
           .then(response => {
             console.log(response.data);
@@ -108,8 +111,8 @@ class TutorialComponent{
             console.log(e);
           });
       }
-
-    render() {
+    
+      render() {
         const { currentTutorial } = this.state;
     
         return (
@@ -188,5 +191,6 @@ class TutorialComponent{
           </div>
         );
       }
-}
+    }
+    
 export default TutorialComponent;
