@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.reactbackend.model.Tutorial;
 import com.reactbackend.service.TutorialService;
 
+
+@CrossOrigin(origins = "http://localhost:8081")
 @RestController
 @RequestMapping("/api")
 public class TutorialController {
@@ -44,7 +47,7 @@ public class TutorialController {
 		}
 	}
 	
-	@PostMapping("/tutorials")
+	@PostMapping("/tutorials/add")
 	public ResponseEntity<Tutorial> createTutorial(@RequestBody Tutorial tutorial) {
 		Tutorial tutorialData = service.createTutorial(tutorial);
 		return new ResponseEntity<>(tutorialData, HttpStatus.CREATED);
