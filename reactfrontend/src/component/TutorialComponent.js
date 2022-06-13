@@ -20,6 +20,9 @@ class TutorialComponent{
           message: ""
         };
       }
+      componentDidMount() {
+        this.getTutorial(this.props.match.params.id);
+      }
 
       onChangeTitle(e) {
         const title = e.target.value;
