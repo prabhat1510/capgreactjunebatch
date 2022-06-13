@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.reactbackend.model.Tutorial;
 import com.reactbackend.service.TutorialService;
 
-
 @CrossOrigin(origins = "http://localhost:8081")
 @RestController
 @RequestMapping("/api")
@@ -46,7 +45,7 @@ public class TutorialController {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
 	}
-	
+
 	@PostMapping("/tutorials/add")
 	public ResponseEntity<Tutorial> createTutorial(@RequestBody Tutorial tutorial) {
 		Tutorial tutorialData = service.createTutorial(tutorial);
